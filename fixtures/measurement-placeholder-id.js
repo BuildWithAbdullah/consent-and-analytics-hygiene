@@ -1,0 +1,1 @@
+gtag('config', 'G-XXXXXXXXXX');

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Example store</title>
+</head>
+<body>
+<main id="page">
+  <h1>Example store</h1>
+</main>
+<section id="cookie-notice" aria-label="Cookie choices">
+  <p>We would like to measure how the site is used.</p>
+  <button type="button" id="cmp-accept">Accept all</button>
+  <button type="button" id="cmp-reject">Reject all</button>
+</section>
+<script>
+gtag('consent', 'default', {
+  ad_storage: 'denied',
+  ad_user_data: 'denied',
+  ad_personalization: 'denied',
+  analytics_storage: 'denied',
+  wait_for_update: 500
+});
+gtag('set', 'ads_data_redaction', true);
+gtag('set', 'url_passthrough', true);
+
+function acceptAll() {
+  gtag('consent', 'update', {
+    ad_storage: 'granted',
+    ad_user_data: 'granted',
+    ad_personalization: 'granted',
+    analytics_storage: 'granted'
+  });
+}
+document.getElementById('cmp-accept').addEventListener('click', acceptAll);
+</script>
+</body>
+</html>
