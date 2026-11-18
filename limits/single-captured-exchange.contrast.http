@@ -1,0 +1,6 @@
+--- host: shop.example.com
+--- phase: pre-consent
+HTTP/1.1 200 OK
+Content-Type: text/html; charset=utf-8
+Set-Cookie: sessionid=opaque-value; Path=/; Secure; HttpOnly; SameSite=Lax
+Set-Cookie: _ga=GA1.1.opaque; Path=/; Secure; SameSite=Lax; Max-Age=31536000

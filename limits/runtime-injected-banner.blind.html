@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Example store</title>
+</head>
+<body>
+<main id="page">
+  <h1>Example store</h1>
+</main>
+<div id="cmp-root"></div>
+<script>
+var root = document.getElementById('cmp-root');
+var panel = document.createElement('section');
+panel.innerHTML = '<p>We use cookies</p>';
+var accept = document.createElement('button');
+accept.type = 'button';
+accept.textContent = 'Accept all';
+panel.appendChild(accept);
+root.appendChild(panel);
+</script>
+</body>
+</html>
