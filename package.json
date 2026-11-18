@@ -1,0 +1,46 @@
+{
+  "name": "consent-and-analytics-hygiene",
+  "version": "1.0.0",
+  "description": "Cookie consent banners, consent mode and analytics tag hygiene as checkable patterns, with a dependency free scanner and a failing example beside every corrected one.",
+  "type": "module",
+  "license": "MIT",
+  "bin": {
+    "consent-check": "bin/consent-check.mjs"
+  },
+  "engines": {
+    "node": ">=20.18.1"
+  },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "bin",
+    "docs",
+    "src"
+  ],
+  "scripts": {
+    "test": "node --test test/catalogue.test.mjs test/severity.test.mjs test/inputs.test.mjs test/scan-elements.test.mjs test/scan-js.test.mjs test/scan-headers.test.mjs test/banner.test.mjs test/consent-mode.test.mjs test/tag-gating.test.mjs test/cookies.test.mjs test/measurement.test.mjs test/storage.test.mjs test/cmp.test.mjs test/pairs.test.mjs test/fixtures.test.mjs test/limits.test.mjs test/report.test.mjs test/cli.test.mjs test/defects.test.mjs test/tools.test.mjs test/repository.test.mjs",
+    "count": "node tools/count-tests.mjs",
+    "verify": "node tools/verify.mjs",
+    "exit-codes": "node tools/exit-codes.mjs",
+    "verdicts": "node tools/audit-verdicts.mjs",
+    "entry": "node tools/entry-thin.mjs",
+    "docs": "node tools/gen-docs.mjs",
+    "docs:check": "node tools/gen-docs.mjs --check"
+  },
+  "keywords": [
+    "consent",
+    "cookie-banner",
+    "consent-mode",
+    "gdpr",
+    "analytics",
+    "google-tag-manager",
+    "ga4",
+    "privacy",
+    "accessibility",
+    "web-performance"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BuildWithAbdullah/consent-and-analytics-hygiene.git"
+  }
+}
