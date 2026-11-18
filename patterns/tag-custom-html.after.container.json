@@ -1,0 +1,91 @@
+{
+  "containerVersion": {
+    "containerId": "GTM-EXAMPLE1",
+    "tag": [
+      {
+        "tagId": "9",
+        "name": "Consent Mode Defaults",
+        "type": "html",
+        "priority": 100,
+        "firingTriggerId": [
+          "1"
+        ],
+        "consentSettings": {
+          "consentStatus": "NEEDED",
+          "consentType": [
+            {
+              "value": "security_storage"
+            }
+          ]
+        },
+        "parameter": [
+          {
+            "key": "html",
+            "value": "defaults declared here"
+          }
+        ]
+      },
+      {
+        "tagId": "20",
+        "name": "Chat widget loader",
+        "type": "html",
+        "priority": 0,
+        "firingTriggerId": [
+          "2"
+        ],
+        "consentSettings": {
+          "consentStatus": "NEEDED",
+          "consentType": [
+            {
+              "value": "functionality_storage"
+            }
+          ]
+        },
+        "parameter": [
+          {
+            "key": "html",
+            "value": "<script src=\"https://cdn.segment.com/analytics.js\"></script>"
+          }
+        ]
+      },
+      {
+        "tagId": "21",
+        "name": "Conversion",
+        "type": "awct",
+        "priority": 0,
+        "firingTriggerId": [
+          "2"
+        ],
+        "consentSettings": {
+          "consentStatus": "NEEDED",
+          "consentType": [
+            {
+              "value": "ad_storage"
+            },
+            {
+              "value": "ad_user_data"
+            }
+          ]
+        },
+        "parameter": [
+          {
+            "key": "conversionId",
+            "value": "AW-111111111"
+          }
+        ]
+      }
+    ],
+    "trigger": [
+      {
+        "triggerId": "1",
+        "name": "Consent Initialization",
+        "type": "CONSENT_INIT"
+      },
+      {
+        "triggerId": "2",
+        "name": "All Pages",
+        "type": "PAGEVIEW"
+      }
+    ]
+  }
+}

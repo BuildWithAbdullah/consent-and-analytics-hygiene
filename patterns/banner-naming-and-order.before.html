@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Example store</title>
+</head>
+<body>
+<main id="page" inert>
+  <h1>Example store</h1>
+</main>
+<div role="dialog" aria-modal="true" id="cookie-dialog" tabindex="-1">
+  <h2 id="cookie-heading">We use cookies</h2>
+  <button type="button" id="cmp-accept" tabindex="1">Accept all</button>
+  <button type="button" id="cmp-reject">Reject all</button>
+</div>
+<p role="status" id="cmp-status"></p>
+<script>
+      function trapFocus(dialog) {
+        dialog.addEventListener('keydown', function (event) {
+          if (event.key !== 'Tab') return;
+          var focusable = dialog.querySelectorAll('button, [href], [tabindex]');
+          var first = focusable[0];
+          var last = focusable[focusable.length - 1];
+          if (event.shiftKey && document.activeElement === first) {
+            last.focus();
+            event.preventDefault();
+          } else if (!event.shiftKey && document.activeElement === last) {
+            first.focus();
+            event.preventDefault();
+          }
+        });
+      }
+      var dialog = document.getElementById('cookie-dialog');
+      trapFocus(dialog);
+      dialog.focus();
+</script>
+</body>
+</html>

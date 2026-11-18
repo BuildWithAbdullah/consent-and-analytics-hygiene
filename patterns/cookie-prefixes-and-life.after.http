@@ -1,0 +1,7 @@
+--- host: shop.example.com
+--- phase: post-consent
+HTTP/1.1 200 OK
+Content-Type: text/html; charset=utf-8
+Set-Cookie: __Host-pref=dark; Path=/; Secure; SameSite=Lax
+Set-Cookie: __Secure-cart=7; Path=/; Secure; SameSite=Lax
+Set-Cookie: cookie_consent=all; Path=/; Secure; SameSite=Lax; Max-Age=15552000

@@ -1,0 +1,42 @@
+{
+  "version": "2026-03-01",
+  "lifetimeDays": 180,
+  "actions": {
+    "acceptAll": true,
+    "rejectAll": true,
+    "save": true
+  },
+  "withdrawal": {
+    "selector": "#privacy-choices"
+  },
+  "record": {
+    "store": "cookie",
+    "fields": [
+      "timestamp",
+      "purposes",
+      "version"
+    ]
+  },
+  "categories": [
+    {
+      "id": "necessary",
+      "essential": true,
+      "defaultEnabled": true
+    },
+    {
+      "id": "analytics",
+      "essential": false,
+      "defaultEnabled": false
+    }
+  ],
+  "legitimateInterest": [
+    {
+      "purposeId": "measurement",
+      "defaultEnabled": false
+    }
+  ],
+  "vendors": {
+    "listUrl": "https://vendors.example.com/list.json",
+    "listVersion": "2026.03"
+  }
+}

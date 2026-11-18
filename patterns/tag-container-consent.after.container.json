@@ -1,0 +1,88 @@
+{
+  "containerVersion": {
+    "containerId": "GTM-EXAMPLE1",
+    "tag": [
+      {
+        "tagId": "9",
+        "name": "Consent Mode Defaults",
+        "type": "html",
+        "priority": 100,
+        "firingTriggerId": [
+          "1"
+        ],
+        "consentSettings": {
+          "consentStatus": "NEEDED",
+          "consentType": [
+            {
+              "value": "security_storage"
+            }
+          ]
+        },
+        "parameter": [
+          {
+            "key": "html",
+            "value": "defaults declared here"
+          }
+        ]
+      },
+      {
+        "tagId": "10",
+        "name": "GA4 Configuration",
+        "type": "gaawc",
+        "priority": 0,
+        "firingTriggerId": [
+          "2"
+        ],
+        "consentSettings": {
+          "consentStatus": "NEEDED",
+          "consentType": [
+            {
+              "value": "analytics_storage"
+            }
+          ]
+        },
+        "parameter": [
+          {
+            "key": "measurementId",
+            "value": "G-EXAMPLE1"
+          }
+        ]
+      },
+      {
+        "tagId": "11",
+        "name": "GA4 Purchase Event",
+        "type": "gaawe",
+        "priority": 0,
+        "firingTriggerId": [
+          "2"
+        ],
+        "consentSettings": {
+          "consentStatus": "NEEDED",
+          "consentType": [
+            {
+              "value": "analytics_storage"
+            }
+          ]
+        },
+        "parameter": [
+          {
+            "key": "eventName",
+            "value": "purchase"
+          }
+        ]
+      }
+    ],
+    "trigger": [
+      {
+        "triggerId": "1",
+        "name": "Consent Initialization",
+        "type": "CONSENT_INIT"
+      },
+      {
+        "triggerId": "2",
+        "name": "All Pages",
+        "type": "PAGEVIEW"
+      }
+    ]
+  }
+}

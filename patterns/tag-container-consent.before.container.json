@@ -1,0 +1,44 @@
+{
+  "containerVersion": {
+    "containerId": "GTM-EXAMPLE1",
+    "tag": [
+      {
+        "tagId": "10",
+        "name": "GA4 Configuration",
+        "type": "gaawc",
+        "priority": 0,
+        "firingTriggerId": [
+          "2"
+        ],
+        "parameter": [
+          {
+            "key": "measurementId",
+            "value": "G-EXAMPLE1"
+          }
+        ]
+      },
+      {
+        "tagId": "11",
+        "name": "GA4 Purchase Event",
+        "type": "gaawe",
+        "priority": 0,
+        "firingTriggerId": [
+          "2"
+        ],
+        "parameter": [
+          {
+            "key": "eventName",
+            "value": "purchase"
+          }
+        ]
+      }
+    ],
+    "trigger": [
+      {
+        "triggerId": "2",
+        "name": "All Pages",
+        "type": "PAGEVIEW"
+      }
+    ]
+  }
+}

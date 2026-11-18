@@ -1,0 +1,7 @@
+--- host: shop.example.com
+--- phase: post-consent
+HTTP/1.1 200 OK
+Content-Type: text/html; charset=utf-8
+Set-Cookie: sessionid=opaque-value; Path=/; Secure; HttpOnly; SameSite=Lax
+Set-Cookie: embed_token=opaque-value; Path=/; Secure; HttpOnly; SameSite=None
+Set-Cookie: cookie_consent=all; Path=/; Secure; SameSite=Lax; Max-Age=15552000

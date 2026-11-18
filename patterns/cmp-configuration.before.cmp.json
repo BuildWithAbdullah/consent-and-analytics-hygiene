@@ -1,0 +1,24 @@
+{
+  "lifetimeDays": 90,
+  "actions": {
+    "acceptAll": true,
+    "save": true
+  },
+  "categories": [
+    {
+      "id": "necessary",
+      "essential": true,
+      "defaultEnabled": true
+    },
+    {
+      "id": "analytics",
+      "essential": false,
+      "defaultEnabled": true
+    },
+    {
+      "id": "marketing",
+      "essential": false,
+      "defaultEnabled": false
+    }
+  ]
+}

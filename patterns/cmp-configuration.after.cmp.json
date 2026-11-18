@@ -1,0 +1,37 @@
+{
+  "version": "2026-03-01",
+  "lifetimeDays": 90,
+  "actions": {
+    "acceptAll": true,
+    "rejectAll": true,
+    "save": true
+  },
+  "withdrawal": {
+    "selector": "#privacy-choices"
+  },
+  "record": {
+    "store": "cookie",
+    "fields": [
+      "timestamp",
+      "purposes",
+      "version"
+    ]
+  },
+  "categories": [
+    {
+      "id": "necessary",
+      "essential": true,
+      "defaultEnabled": true
+    },
+    {
+      "id": "analytics",
+      "essential": false,
+      "defaultEnabled": false
+    },
+    {
+      "id": "marketing",
+      "essential": false,
+      "defaultEnabled": false
+    }
+  ]
+}
